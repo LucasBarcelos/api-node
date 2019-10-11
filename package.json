@@ -20,6 +20,7 @@
   "homepage": "https://github.com/LucasBarcelos/api-node#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "firebase": "^7.2.0",
     "nodemon": "^1.19.3"
   }
 }
