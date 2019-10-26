@@ -6,20 +6,19 @@ const firebaseConfig = require('./config/firebase');
 //const firebaseApp = firebase.initializeApp(firebaseConfig);
 //const db = firebaseApp.firestore();
 
+const routes = require('./routers');
 const bodyParser = require('body-parser');
 const createToken = require('./utils/createToken');
 const verifyToken = require('./middlewares/verifyToken');
 
 const app = express(); // Criando nova instância do express
 
-const Users = require('./controllers/Users');
 const Auth = require('./controllers/Auth');
 
 app.use(bodyParser.json());
-app.post('/auth', Auth.post);
+app.use(routes);
 
-// Criando rotas
-app.get('/users/:id', Users.get);
+app.post('/auth', Auth.post);
 
 app.get('/users', (request, response, next) => {
 // Buscar todos os dados da coleção 'users'
