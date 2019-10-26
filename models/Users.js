@@ -19,6 +19,17 @@ class Users extends BaseModel {
             .where('password', '==', password)
             .get();
     }
+
+    put(id, email, password,) {
+        return this.db
+            const id = request.par
+            .collection('users')
+
+            
+            .where('email', '==', email)
+            .where('password', '==', password)
+            .put();
+    }
 }
 
 module.exports = Users;

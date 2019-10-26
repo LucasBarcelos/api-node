@@ -42,6 +42,16 @@ class Users {
             });
         });
     }
+
+    static update(request, response) {
+        // request -> params e o body
+        // logica do firebase para atualizar um usuário
+    }
+
+    static delete(request, response) {
+        // request -> params e o body
+        // logica do firebase para atualizar um usuário
+    }
 }
 
 module.exports = Users;
